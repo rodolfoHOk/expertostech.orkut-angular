@@ -1,0 +1,12 @@
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+aside {
+  width: 250px;
+}
+
+main {
+  width: calc(100vw - 250px);
+}

@@ -1,1 +1,61 @@
-<p>header works!</p>
+<nav class="header-content navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg"
+        alt=""
+        width="30"
+        height="24"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+    >
+      <i-bs name="list" width="2rem" height="2rem"> ></i-bs>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+      [collapse]="isCollapsed"
+      [isAnimated]="true"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/perfil">
+            Início
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/recados">Página de Recados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/amigos">Amigos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/comunidades">Comunidades</a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="d-flex" role="search">
+      <span class="my-auto me-2">exemplo@email.com</span>
+      <button class="btn nav-link">sair</button>
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Pesquisa no Orkut"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+  </div>
+</nav>
